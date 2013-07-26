@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="studentreport1" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4713a75a-4d74-4e4e-905d-3f96600b3b8d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="rfid" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="sem" class="java.lang.String"/>
+	<parameter name="dept" class="java.lang.String"/>
+	<parameter name="batch" class="java.lang.String"/>
+	<field name="course" class="java.lang.String"/>
+	<field name="mark" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="335c57fb-2312-4f0d-b9de-d4d7c37dba17" x="56" y="22" width="463" height="57" forecolor="#000099"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERFORMANCE REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="190" splitType="Stretch">
+			<textField>
+				<reportElement uuid="3ee0c30b-b875-4de8-a801-58421933eb90" x="252" y="105" width="250" height="32"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ee0c30b-b875-4de8-a801-58421933eb90" x="252" y="74" width="250" height="32"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dept}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ce85dcd4-df30-47b4-bea8-0df993acef13" x="80" y="106" width="172" height="32" forecolor="#666666"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Semester :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a45d77f8-cfe4-467e-831f-61bddb1418be" x="252" y="138" width="250" height="31"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{batch}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ef07eab0-7578-4a12-ac22-c2cc0544e3f4" x="80" y="138" width="172" height="31" forecolor="#666666"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Batch :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ce85dcd4-df30-47b4-bea8-0df993acef13" x="80" y="74" width="172" height="32" forecolor="#666666"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Department :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ce85dcd4-df30-47b4-bea8-0df993acef13" x="80" y="42" width="172" height="32" forecolor="#666666"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3ee0c30b-b875-4de8-a801-58421933eb90" x="252" y="10" width="250" height="32"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rfid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ce85dcd4-df30-47b4-bea8-0df993acef13" x="80" y="10" width="172" height="32" forecolor="#666666"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RFID :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="3ee0c30b-b875-4de8-a801-58421933eb90" x="252" y="42" width="250" height="32"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="bcd85f5d-8124-40e4-91bd-39a38a763c3a" x="56" y="9" width="176" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Course Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d2c491bb-5825-4e99-a171-7aa9d20af25e" x="251" y="9" width="227" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marks Obtained]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement uuid="84459623-1075-4712-84a0-853ef616e411" x="56" y="16" width="176" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{course}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5d99ae28-2ed3-4f41-85c1-3f939ca635aa" x="252" y="16" width="153" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{mark}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
